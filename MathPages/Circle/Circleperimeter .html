@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tperimeter</title>
+    <link href="../../wwwroot/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../wwwroot/lib/jquery/jquery.min.js"></script>
+    <link rel="icon" href="../../Math imgs/mathicon.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: aquamarine;
+            /*   height: 100vh;  Adjust the height as needed */
+        }
+    </style>
+</head>
+
+
+<body class="">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column bg-body-secondary ">
+        <header class="mb-auto">
+
+            <h3 class=" float-md-start mb-0">Mathmatic Solution </h3>
+            <div>
+                <nav class="nav   float-md-end justify-content-center ">
+                    <a class="nav-link  m-2  fw-bold py-1 px-0 " href="../MainPage.html">Home</a>
+                    <a class="nav-link  m-2  fw-bold py-1 px-0" href="#">Features</a>
+                    <a class="nav-link   m-2 fw-bold py-1 px-0" href="../LoginPage.html">Logout</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main class="mt-5">
+        <div class="container w-50  ">
+            <form class="form  ">
+                <h1> Get perimeter of Circle using Radius</h1>
+
+                <div class="form-control d-grid">
+                    <label for="num1">radius </label>
+                    <input type="number" class="fs-3 text-center" id="num1" placeholder="Enter radius" required />
+                </div>
+
+
+
+                <div class="row container m-1">
+
+                    <input type="button" id="Spb" class="btn  m-2  btn-primary col" value="Calculate" />
+                    <input type="text" id="result" class="col fs-3 text-center m-2 " placeholder="Result Show here" readonly />
+                </div>
+            </form>
+
+            <form class="form  ">
+                <h1> Get perimeter of Circle using Diameter</h1>
+
+                <div class="form-control d-grid">
+                    <label for="num1">Diameter </label>
+                    <input type="number" class="fs-3 text-center" id="num2" placeholder="Enter d" required />
+                </div>
+
+
+
+                <div class="row container m-1">
+
+                    <input type="button" id="Spb2" class="btn  m-2  btn-primary col" value="Calculate" />
+                    <input type="text" id="result2" class="col fs-3 text-center m-2 " placeholder="Result Show here" readonly />
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <script>
+        $(function () {
+
+            /* Perimeter or Square */
+            $("#Spb").on("click", function () {
+                let num1 = parseFloat($("#num1").val());
+
+                // NaN if 1 or them not equal a number
+                if (!isNaN(num1)) {
+                    // Calculate the perimeter
+                    var perimeter = 2 * Math.PI * num1;
+                    // Display the result
+                    $("#result").val(perimeter.toFixed(2));
+                }
+                else {
+                    $("#result").val("Invalid input");
+                }
+            });
+
+            $("#Spb2").on("click", function () {
+                let num2 = parseFloat($("#num2").val());
+
+                // NaN if 1 or them not equal a number
+                if (!isNaN(num2)) {
+                    // Calculate the perimeter
+                    var perimeter2 = Math.PI * num2;
+                    // Display the result
+                    $("#result2").val(perimeter2.toFixed(2));
+                }
+                else {
+                    $("#result2").val("Invalid input");
+                }
+            });
+
+
+        }
+        );
+
+    </script>
+
+
+    <script src="../../wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

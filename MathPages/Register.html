@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mathmatic Solution</title>
+    <link href="../wwwroot/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="../Math imgs/mathicon.png" type="image/x-icon">
+    <style>
+        form {
+            color: aliceblue;
+        }
+
+        body {
+            background-image: url(Mathematics-Banner.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Adjust the height as needed */
+        }
+    </style>
+</head>
+<body class="vh-100 " style="background-color: #508bfc;">
+    <section class="row   h-100">
+        <form id="form" class="container my-auto bg-black p-4 col-4  object-fit-contain border rounded  ">
+            <div class=" form-floating">
+                <h3 class="container">Register Form</h3>
+
+
+
+                <div class="  ">
+                    <label for="Firstname" class=" col-form-label ">FirstName: </label>
+                    <input type="text" id="Firstname" class="form-control" placeholder="Enter FirstName" />
+
+                </div>
+                <div>
+
+                    <label for="LastName" class=" col-form-label">LastName: </label>
+                    <input type="text" id="LastName" class="form-control" placeholder="Enter LastName" />
+                </div>
+
+
+
+                <div>
+                    <label for="email" class=" col-form-label">Email: </label>
+                    <input type="text" id="email" class="form-control" placeholder="Enter Email" />
+                </div>
+
+
+                <div>
+                    <label for="pass" class="col-sm-2 col-form-label">Password: </label>
+                    <input type="text" id="pass" class="form-control" placeholder="Enter Password" />
+                </div>
+                <div>
+                    <label for="mobile" class="col-form-label"> Mobile Number : </label>
+                    <input type="text" id="mobile" class="form-control" placeholder="Enter Mobile Number" />
+                </div>
+                <br />
+
+                <div class="g-md-3 d-inline p-2">
+                    <label for="Gender" class="  form-check-label"> Male </label>
+                    <input type="radio" id="maleRadio" class="form-check-input" name="gender" value="male" />
+                </div>
+                <div class="g-md-3 d-inline p-2">
+                    <label for="Gender2" class="  form-check-label"> Female </label>
+                    <input type="radio" id="femaleRadio" class="form-check-input" name="gender" value="female" />
+
+                </div>
+
+                <div>
+                    <a class="btn btn-primary mt-3  float-end " id="btn" href="LoginPage.html">Register</a>
+                </div>
+                <br />
+            </div>
+        </form>
+    </section>
+    <script>
+        //$(function () {
+        //    $("input[type='radio']").on("change", function () {
+        //        var selectedGender = $("input[name='gender']:checked").val();
+
+        //        // Use if condition to check the selected gender
+        //        if (selectedGender === "male") {
+        //            // Add additional actions for male selection if needed
+        //            $("#femaleRadio").prop("checked", false);
+        //        } else if (selectedGender === "female") {
+        //            // Add additional actions for female selection if needed
+        //            $("#maleRadio").prop("checked", false);
+        //        }
+        //    });
+        //})  
+    </script>
+    <script src="../wwwroot/lib/jquery/jquery.min.js"></script>
+</body>
+</html>
